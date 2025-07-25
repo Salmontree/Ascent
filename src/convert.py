@@ -2,4 +2,4 @@
 # TODO: Sets flags for the create process to make advancements or predicates or tags or what have you.
 
 def convert(project):
-    pass
+    return project
