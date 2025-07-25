@@ -1,3 +1,5 @@
+# TODO: Loads the raw project data into a Project class, then runs it through the pipeline.
+
 class Project:
     def __init__(self) -> None:
         self.name = "Ascent Project"
@@ -6,3 +8,7 @@ class Project:
 
         self.input_path = ""
         self.output_path = "../" + self.name
+
+        self.source = ""
+
+
