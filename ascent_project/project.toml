@@ -1,0 +1,5 @@
+[project]
+name = "hello world"
+
+[minecraft]
+version = "1.21.7"
