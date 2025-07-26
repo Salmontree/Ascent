@@ -1,0 +1,7 @@
+func load()
+    print("hello world")
+end
+
+func tick()
+    
+end
