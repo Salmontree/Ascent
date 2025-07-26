@@ -5,6 +5,7 @@ def parse(project):
     # Put all functions into a list, which can be SORT OF easily compiled into .mcfunction files by reading instructions line by line
     project.functions = {}
 
-    
+    for char in project.source:
+        print(char)
 
     return project

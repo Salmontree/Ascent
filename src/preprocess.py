@@ -31,5 +31,4 @@ def preprocess(project):
     project.source = project.source.replace(" (", "(")
     project.source = project.source.replace(") ", ")")
 
-    print(project.source)
     return project
