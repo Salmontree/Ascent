@@ -6,7 +6,7 @@ import sys
 import os
 
 from preprocess import preprocess
-from convert    import convert
+from parse      import parse
 from create     import create
 
 class Project:
@@ -18,6 +18,7 @@ class Project:
         self.data_format = "80" # 1.21.7
         self.res_format = "60"  # 1.21.7
         
+        self.path = ""
         self.source_path = "src"
         self.output_path = "" # default value is loaded later on in the script
 
@@ -44,6 +45,7 @@ try:
 except KeyError: pass # .mcproject file didn't have those values but we don't wanna crash lol
 
 # Default values
+project.path = sys.argv[1]
 if project.output_path == "": project.output_path = "../" + project.name + " Datapack"
 
 ########################################################
@@ -51,7 +53,7 @@ if project.output_path == "": project.output_path = "../" + project.name + " Dat
 ########################################################
 
 project = preprocess(project)
-project = convert(project)
+project = parse(project)
 create(project)
 
 
