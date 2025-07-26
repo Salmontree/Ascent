@@ -14,11 +14,22 @@ def preprocess(project):
         project.source += file.read() + "\n"
         file.close()
 
+    # Remove comments
+    while project.source.__contains__("/*"):
+        project.source = project.source.replace(project.source[project.source.find("/*"):project.source.find("*/", project.source.find("/*"))+2], "")
+
+    while project.source.__contains__("//"):
+        project.source = project.source.replace(project.source[project.source.find("//"):project.source.find("\n", project.source.find("//"))], "")
+
     # Remove whitespace
-    project.source = project.source.replace("    ", "\t")
     iterator = project.source.splitlines()
     for line in iterator:
-        project.source = project.source.replace(line, line.lstrip(" ").rstrip(" \t"))
+        project.source = project.source.replace(line, line.strip())
+    project.source = project.source.replace("\n", "")
+    while project.source.__contains__("  "):
+        project.source = project.source.replace("  ", " ")
+    project.source = project.source.replace(" (", "(")
+    project.source = project.source.replace(") ", ")")
 
     print(project.source)
     return project
