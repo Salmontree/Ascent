@@ -1,5 +1,5 @@
 # Ascent
-A tool to make datapack creation a *lot* easier, by using a C-like language called MCScript and an asset loading system to convert high-level Ascent projects into a lowish-level Minecraft datapack/resourcepack combo. 
+A tool to make datapack creation a *lot* easier, by converting high-level Ascent projects into lowish-level Minecraft datapacks. 
 
 ## Installation
 Nothing to install! (yet)
